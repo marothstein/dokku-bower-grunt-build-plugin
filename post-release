@@ -18,4 +18,4 @@ id=$(docker run -d $IMAGE /bin/bash -c "$COMMAND")
 docker attach $id
 test $(docker wait $id) -eq 0
 docker commit $id $IMAGE > /dev/null
-echo "-----> Built Node"
+echo "-----> Built client application (installed grunt and compiled to dist)"
